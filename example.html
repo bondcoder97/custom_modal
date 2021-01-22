@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="./style/css/example.css">
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="Text" class="alert_modal_text" />
+        <select class="alert_modal_type">
+            <option value="">Simple</option>
+            <option value="success">Success</option>
+            <option value="error">Error</option>
+        </select>
+        <button class="alert_modal_btn">Alert Modal</button>
+    </div>
+
+    <script src="./alert_modal.js"></script>
+    <script>
+        document.querySelector(".alert_modal_btn").addEventListener("click", ()=>{
+            const text = document.querySelector(".alert_modal_text").value;
+            const modal_type = document.querySelector(".alert_modal_type").value;
+            alert_modal(text, {modal_type});
+        });
+    </script>
+</body>
+</html>
