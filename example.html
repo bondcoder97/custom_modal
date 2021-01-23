@@ -15,14 +15,22 @@
             <option value="error">Error</option>
         </select>
         <button class="alert_modal_btn">Alert Modal</button>
+        <input type="text" placeholder="Text" class="confirm_modal_text" />
+        <button class="confirm_modal_btn">Confirm Modal</button>
     </div>
 
     <script src="./alert_modal.js"></script>
+    <script src="./confirm_modal.js"></script>
     <script>
         document.querySelector(".alert_modal_btn").addEventListener("click", ()=>{
             const text = document.querySelector(".alert_modal_text").value;
-            const modal_type = document.querySelector(".alert_modal_type").value;
-            alert_modal(text, {modal_type});
+            const alert_modal_type = document.querySelector(".alert_modal_type").value;
+            alert_modal(text, {alert_modal_type});
+        });
+
+        document.querySelector(".confirm_modal_btn").addEventListener("click", ()=>{
+            const text = document.querySelector(".confirm_modal_text").value;
+            confirm_modal(text);
         });
     </script>
 </body>
