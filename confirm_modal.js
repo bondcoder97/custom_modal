@@ -20,19 +20,18 @@
         `;
         
         modal_wrapper.querySelector(".accept_btn").addEventListener("click", ()=> {
-            dispatchEvent(new CustomEvent("user_answer", {detail: {answer: true}}))
-            modal_wrapper.remove()
-        })
+            modal_wrapper.dispatchEvent(new CustomEvent("user_answer", {detail: {answer: true}}));
+        });
+
         modal_wrapper.querySelector(".cancel_btn").addEventListener("click", ()=> {
-            dispatchEvent(new CustomEvent("user_answer", {detail: {answer: false}}))
-            modal_wrapper.remove()
-        })
+            modal_wrapper.dispatchEvent(new CustomEvent("user_answer", {detail: {answer: false}}));
+        });
         document.body.appendChild(modal_wrapper);
 
-       // объект promise
         const answer = await new Promise((resolve, reject) => {
-            modal_wrapper.addEventListener("user_answer", function(data) {
-                resolve(data.detail.answer)
+            modal_wrapper.addEventListener("user_answer", function({detail: {answer}}) {
+                resolve(answer);
+                modal_wrapper.remove();
             })
         });
         return answer;

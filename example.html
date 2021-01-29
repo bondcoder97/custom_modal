@@ -28,9 +28,10 @@
             alert_modal(text, {alert_modal_type});
         });
 
-        document.querySelector(".confirm_modal_btn").addEventListener("click", ()=>{
+        document.querySelector(".confirm_modal_btn").addEventListener("click", async()=>{
             const text = document.querySelector(".confirm_modal_text").value;
-            confirm_modal(text);
+            const result = await confirm_modal(text);
+            console.log(result);
         });
     </script>
 </body>
