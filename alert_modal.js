@@ -1,12 +1,12 @@
 (function(){
 
     function alert_modal(text, options={}){
-        const {alert_modal_type="default", header="Attention!"} = options;
+        const {modal_type="default", header="Attention!"} = options;
         if(!text) throw new Error("Modal text is required!");
         const modal_wrapper = document.createElement("div");
         modal_wrapper.className = "custom_modal_wrapper";
         modal_wrapper.innerHTML = `
-            <div class="custom_modal ${alert_modal_type !== "default"? alert_modal_type : ""}">
+            <div class="custom_modal ${modal_type !== "default"? modal_type : ""}">
                 <div class="custom_modal_header">
                     ${header}
                 </div>

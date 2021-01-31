@@ -1,15 +1,17 @@
-Simple alert modal instead native "alert" that often can be blocked by browser. 
+Simple modals instead native "alert" that often can be blocked by browser. 
 
-# modal types
+# Modal types
 - success
 - error
 - default
 
 # HTML file
 <script src="alert_modal.js">  </script>
+<script src="confirm_modal.js">  </script>
 
 # Scss
-@import "./alert_modal";
+@import "./custom_modal";
 
-# call
+# Use
 alert_modal("my text")
+await confirm_modal("Are you really want to do it?")
