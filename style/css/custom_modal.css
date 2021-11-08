@@ -1,0 +1,75 @@
+.custom_modal_wrapper {
+  background-color: #808080a8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom_modal_wrapper .custom_modal {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 50%;
+  background-color: white;
+}
+.custom_modal_wrapper .custom_modal .custom_modal_header {
+  height: 20%;
+  background-color: #051538;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+.custom_modal_wrapper .custom_modal.error .custom_modal_header {
+  background-color: darkred;
+}
+.custom_modal_wrapper .custom_modal.error .custom_modal_btns .btn {
+  background-color: darkred;
+}
+.custom_modal_wrapper .custom_modal.error .custom_modal_content p {
+  border-color: darkred;
+}
+.custom_modal_wrapper .custom_modal.success .custom_modal_header {
+  background-color: darkgreen;
+}
+.custom_modal_wrapper .custom_modal.success .custom_modal_btns .btn {
+  background-color: darkgreen;
+}
+.custom_modal_wrapper .custom_modal.success .custom_modal_content p {
+  border-color: darkgreen;
+}
+.custom_modal_wrapper .custom_modal .custom_modal_content {
+  height: 60%;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom_modal_wrapper .custom_modal .custom_modal_content p {
+  border-bottom: 1px solid #051538;
+  word-break: normal;
+  text-align: center;
+}
+.custom_modal_wrapper .custom_modal .custom_modal_btns {
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.custom_modal_wrapper .custom_modal .custom_modal_btns .btn {
+  background-color: #051538;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 70%;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=custom_modal.css.map */
